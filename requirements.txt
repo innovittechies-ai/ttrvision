@@ -1,0 +1,14 @@
+streamlit>=1.28.0
+requests>=2.31.0
+transformers>=4.30.0
+torch>=2.0.0
+Pillow>=10.0.0
+numpy>=1.24.0
+# CRITICAL: Install opencv-python-headless FIRST to avoid OpenGL dependency issues
+# This must be installed before ultralytics to prevent opencv-python from being installed
+opencv-python-headless>=4.8.0
+ultralytics>=8.0.0
+# Note: After installation, opencv-python (if installed by ultralytics) will be automatically
+# uninstalled by the app code on startup. For a permanent fix, configure Streamlit Cloud
+# to run: pip uninstall opencv-python -y (as a post-install step)
+
